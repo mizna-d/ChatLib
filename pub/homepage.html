@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title> ChatLib: ChatUIs Made Easy </title>
+   <link rel="icon" href="./assets/message-icon.png">
+   <link rel='stylesheet' href='./homepage.css'>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Comforter+Brush&family=Cookie&family=Satisfy&family=Varela+Round&display=swap"
+      rel="stylesheet">
+
+   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script defer type="text/javascript" src="./ChatLib/ChatLib.js"></script>
+   <script defer type="text/javascript" src='./homepage.js'></script>
+
+</head>
+<nav id="navbar" class="">
+   <div class="nav-wrapper">
+      <div class>
+         <div class ='logo'>
+            <img class="logo" src="./assets/logo2.svg">
+         </div>
+         <div class="title">
+            <p>ChatLib</p>
+         </div>
+      </div>
+
+      <ul id="menu">
+         <li><a href="/">Home</a></li>
+         <li><a href="/communityExample">ChatLib Example One</a></li>
+         <li><a href="/businessExample">ChatLib Example Two</a></li>
+         <li><a href="/documentation">Documentation</a></li>
+      </ul>
+   </div>
+</nav>
+
+<section id="topSect">
+   <header >
+   <div id="grid">
+      <div id= "landing">
+         <h1>ChatLib.</h1>
+         <p>Creating interactive chat interfaces with ease </p>
+         <a style="margin-right: 30px;" href="#learnMore" class="button">Learn More</a>
+         <a style="margin-right: 30px;" href="#getStarted" class="button">Get Started</a>
+         <a href="./documentation" class="button">Documentation</a>
+         
+
+      </div>
+
+      <div id="icon">
+         <img id="icon" src="../../assets/chat-bot-animate.svg">
+      </div>
+   </div>
+   </header>
+</section>
+
+<section id="learnMore">
+<div style="height: 70vh; padding: 5%; padding-top: 10%; display: flex; flex-direction: row;">
+   <div style="height: 200%; width: 200%; margin: 5%;"> 
+      <img src="../../assets/messaging--animate.svg" alt="">
+   </div>
+   <div>
+      <h1 class="aboutTitle">About ChatLib.</h1>
+      <p class="aboutText"><em>ChatLib</em> helps to create chat windows which can present forms and quizzes in a variety of unique ways, allowing websites to become more interactive and have more personality. This library provides an easy way for developers to integrate a chat bot/forms into their website and increase user interaction. What makes this library original from the others is the unique presentation style of questions and the variety of creative animations which have been provided for the developer to use. </p>
+   </div>
+</div>
+</section>
+
+<section id="getStarted">
+   <div style="height: 80vh; padding: 5%;">
+      <div style="display: flex; flex-direction: column;">
+         <h1 class="aboutTitle">Getting Started.</h1>
+         
+         <div class="aboutText">
+            <p> Chatlib has a few dependencies which are required before you are able to start coding with it. The instructions to set up ChatLib on your machine are found  <a href="/documentation">here</a> </p>
+         </div>
+         <h2 style="font-weight: bold; font-size:xx-large;">Set Up</h2>
+         <div style="display: flex; flex-direction: row;">
+            <div style="width: 60%; margin-right: 3%;"">
+               <p class="aboutText">After downloading the required prerequisites, starting the project is very simple! On the left we see the basic set up code which is simply initializing the chat window. <br>
+               Generally the setting should be done before calling the createChatWindow() function to avoid errors. More details can be found in the documentation.</p>
+            </div>
+            <div id="chatExample" style="max-width: 99vw;">
+               <img id="setup" src="../../assets/chatLib-setUp.png">               
+            </div>
+         </div>
+         <div> <p class="aboutText"> Next, using the rest of the features of ChatLib, we are able to create an interactive conversation between the user and the bot. In this basic example we create a bot message as well as prompt a multiple choice question. This code is actually the same code that is running on this page, presenting the chatbot to you. With this you can compare the code to the output. To see even more examples of the chatBot being used in more realistic scenerios, check out the examples found in the navbar.</p> </div>
+         <!-- <div style="display: flex; flex-direction: row;"> -->
+            <img id="code" src="../../assets/chatlib-addquestions.png">
+         </div>
+      <!-- </div> -->
+   </div>
+   </section>
+
+
+<!-- <footer id="footer"> -->
+   <!-- <p> Mizna Dada CSC309 2021 </p><a href="https://storyset.com/online" style="color: whitesmoke; font-style: italic; position: fixed; bottom: 0;"> Online illustrations by Storyset</a> -->
+<!-- </footer> -->
+</html>

@@ -1,0 +1,220 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+body{
+    /* margin:0; */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    /* font-size:17px; */
+    color:#77B9F1;
+    line-height:1.6;
+    margin: 0;
+  }
+  #navbar {
+    background: #77B9F1;
+    opacity: 0.99;
+    color: rgb(13, 26, 38);
+    position: sticky;
+    top: 0;
+    height: 70px;
+    line-height: 60px;
+    width: 98.65vw;
+    margin-bottom: 0;
+  }
+  
+  .nav-wrapper {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  
+  .logo {
+    float: left;
+    margin-left: 4%;
+    height: 80px;
+    margin-top: -2px;
+    letter-spacing: 1px;
+    border-radius: 2rem;
+    margin-bottom: 0;
+  } 
+  
+.title {
+    float: left;
+    margin-top: -15px;
+    height: 80px;
+    letter-spacing: 1px;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    font-variant-caps:all-small-caps;
+    margin-bottom: 0;
+
+}
+
+  #navbar ul {
+    float: right;
+    margin-right: 3%;
+    margin-top: 1px;
+    text-align: right;   
+    margin-bottom: 0;   
+    }
+  
+  #navbar li {
+    display: inline-block;
+  }
+  
+  #navbar li a {
+    color: rgb(255, 255, 255);
+    font-size: 0.7em;
+    height: 60px;
+    letter-spacing: 1.5px;
+    margin: 0 20px;
+    padding: 0 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .aboutTitle {
+    font-size:80px;
+    /* line-height:1.2; */
+    margin-bottom: 1%;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    /* font-size: 7rem; */
+  }
+
+  .aboutText {
+    font-size: 25px;
+    font-family:'Varela Round', sans-serif ;
+  }
+
+  #topSect {
+      background-color: #77b8f1a4;}
+
+  #grid {
+      display: flex;
+      flex-direction: row;
+      background-image: url(../../assets/imgonline-com-ua-Color-filter-Gd7Uk8kLJxg4.jpg);
+      height: 100vh;
+      width: 98.65vw;
+      background-position: center;
+      background-size: cover;
+  }
+
+  #icon {
+      height: 80vh;
+      margin-top: 4vh;
+  }
+
+  #landing{
+    height:100vh;
+    padding: 8rem;
+    margin-top: 5vh;
+    margin-right: 0;
+    margin-left: 1vw;
+    
+  }
+  
+  #landing h1{
+    font-size:150px;
+    line-height:1.2;
+    margin-bottom: 1%;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+  }
+  
+  #landing p{
+    font-size:30px;
+    margin-top: 0;
+    margin-bottom: 3vh;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-transform: lowercase;
+
+  }
+  
+  #landing .button{
+    font-size:20px;
+    text-decoration:none;
+    color:#77B9F1;
+    border:#77B9F1 1px solid;
+    padding:10px 20px;
+    border-radius:10px;
+    margin-top:20px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+  }
+  
+  #landing .button:hover{
+    background:#77B9F1;
+    color:#fff;
+  }
+  
+  #section{
+    padding:20px;
+    font-family: 'Varela Round', sans-serif;
+    background:#77B9F1;
+    color:#fff;
+    display: flex;
+  }
+  
+  .container {
+    border-radius: 0.8rem;
+    min-width: 20%;
+    text-align: center;
+    padding: 2%;
+    background:#f9f9f9;
+    color: #77B9F1;
+    font-family: 'Varela Round', sans-serif;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+      
+      .showcase {
+          align-items: start;
+          background: url(./assets/blue-bg-side.jpg);
+          background-size: cover;
+          display: flex;
+          flex-direction: column;
+          /* grid-area: showcase; */
+          justify-content: center;
+          min-height: 400px;
+          padding: 3rem;
+  }
+
+
+  #footer {
+    background: #77B9F1;
+    bottom: 0;
+    color: white;
+    width: 97vw;
+    text-align: center;
+    padding: 0.8rem;
+    margin: 0px;
+  }
+
+  #setup {
+    width: 90%;
+  }
+
+  #code {
+    width: 90%;
+    align-self: center;
+  }
+  /* #footer .p {
+      padding: 0px;
+      margin: 0px;
+  } */
+  /* My Fonts */
+    /* font-family: 'Cedarville Cursive', cursive; */
+    /* font-family: 'Comforter Brush', cursive; */
+    /* font-family: 'Cookie', cursive; */
+    /* font-family: 'Varela Round', sans-serif; */
+
+
+  

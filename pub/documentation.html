@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title> ChatLib: Documentation </title>
+   <link rel="icon" href=".assets/message-icon.png">
+   <link rel='stylesheet' href='./documentation.css'>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Comforter+Brush&family=Cookie&family=Satisfy&family=Varela+Round&display=swap"
+      rel="stylesheet">
+   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<nav id="navbar" class="">
+    <div class="nav-wrapper">
+       <div class>
+          <div class ='logo'>
+             <img class="logo" src="./assets/logo2.svg">
+          </div>
+          <div class="title">
+             <p>ChatLib</p>
+          </div>
+       </div>
+ 
+       <ul id="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/communityExample">ChatLib Example One</a></li>
+        <li><a href="/businessExample">ChatLib Example Two</a></li>
+        <li><a href="/documentation">Documentation</a></li>
+       </ul>
+    </div>
+ </nav>
+
+
+ <main id="main-doc">
+    
+<h1 id="main-title"> ChatLib Documentation. </h1>
+<div style="padding: 2%; padding-top: 0;">
+
+   <section class="" id="">
+    <h1 >Setting Up</h1>
+     <p>ChatLib is a very easy to use front-end library and only requires a few dependencies before we can get started. 
+
+        ChatLib uses jQuery so it is necessary for you to include jQuery as a script in the head of your HTML like so:
+        
+        <code>&lt;script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">&lt;/script></code>
+        
+        ChatLib also requires certain fonts which must also be imported as well. The code below should be added to the head of your HTML to import this dependency:
+        
+        <code>&lt;link rel="preconnect" href="https://fonts.googleapis.com"><br><br>
+            &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><br><br>
+            &lt;link
+               href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Comforter+Brush&family=Cookie&family=Satisfy&family=Varela+Round&display=swap"
+               rel="stylesheet"></code>
+        
+        Lastly, we must import the ChatLib Library itself. You can download the code <a href="https://github.com/csc309-fall-2021/js-library-dadamizn">here</a>. Importing the library can be done by including this following script in the head of your HTML like so:
+        
+        <code>&lt;script defer type="text/javascript" src="ChatLib.js">&lt;/script></code>
+        
+        Now we have finished setting up and we start creating chat interfaces right away! An example of a basic implentation can be found on the <a href="/#getStarted">home page</a></p>
+       
+   </section>
+    
+   <section class="" id="">
+    <h1> Global Variables</h1>
+     <p>The global variables available for use</p>
+   <section>
+       <table>
+           <thead>
+                <td><strong>variable name</strong></td>
+                <td><strong>default</strong></td>
+                <td><strong>type</strong></td>
+                <td><strong>description</strong></td>
+           </thead>
+        <tbody>
+            <tr>
+                <td><strong>userMessages</strong></td>
+                <td>[]</td>
+                <td>Array</td>
+                <td>Stores all messages sent by the user which allows the developer to have access to all previous user input</td>
+            </tr>
+            <tr>
+                <td><strong>themeSets</strong></td>
+                <td>[defaultTheme, businessTheme, coffeeTheme, customTheme]</td>
+                <td>Array</td>
+                <td>Stores all themeSets available for the developer to set the current theme as.</td>
+            </tr>
+      </tbody>
+    </table>
+
+    <h1> Private Variables</h1>
+    <p>Though these are not available for use, it is important to know the default values they are set as. They can be changed through methods found in the next section.</p>
+        <section>
+            <table>
+                <thead>
+                    <td><strong>variable name</strong></td>
+                    <td><strong>default</strong></td>
+                    <td><strong>type</strong></td>
+                    <td><strong>description</strong></td>
+                </thead>
+            <tbody>
+                <tr>
+                    <td><strong> botIcon</strong></td>
+                    <td>''</td>
+                    <td>String</td>
+                    <td>Stores the filePath to the bot's profile picture</td>
+                </tr>
+                <tr>
+                    <td><strong> userIcon</strong></td>
+                    <td>''</td>
+                    <td>String</td>
+                    <td>Stores the filePath to the user's profile picture</td>
+                </tr>
+                <tr>
+                    <td><strong> minimizedOnLoad</strong></td>
+                    <td>false</td>
+                    <td>Boolean</td>
+                    <td>Setting for the chat window to be minimized when the page loads </td>
+                </tr>
+                <tr>
+                    <td><strong> botDelay</strong></td>
+                    <td>1.5</td>
+                    <td>Number</td>
+                    <td>Delay time in seconds before each message sent by the bot</td>
+                </tr>
+                <tr>
+                    <td><strong> userDelay</strong></td>
+                    <td>0.5</td>
+                    <td>Number</td>
+                    <td>Delay time in seconds before each user input is presented in the user window</td>
+                </tr>
+                <tr>
+                    <td><strong> currentTheme</strong></td>
+                    <td>defaultTheme</td>
+                    <td>Theme Object</td>
+                    <td>The theme the chat window should present</td>
+                </tr>
+        </tbody>
+        </table>
+    </section>
+
+   <section>
+    <h1> Methods </h1>
+     <p>The methods available for developers to use to create quick and easy chat interfaces.</p>
+
+     <section>
+        <table>
+            <thead>
+                 <td><strong>method</strong></td>
+                 <td><strong>parameters</strong></td>
+                 <td><strong>types</strong></td>
+                 <td><strong>description</strong></td>
+            </thead>
+         <tbody>
+             <tr>
+                 <td class="mainElement"><strong>createChatWindow()</strong></td>
+                 <td>none</td>
+                 <td>none</td>
+                 <td>Initializes the window where the chatbot will reside.</td>
+             </tr>
+             <tr>
+                <td class="mainElement"><strong>addBotMessage()</strong></td>
+                <td>
+                    <b>text</b>: The text within the bot's message<br>
+                    <b>nextFunction</b>: The function that should follow after
+                </td>
+                <td>String, function</td>
+                <td>Adds bot messages into the chat window.</td>
+            </tr>
+            <tr>
+                <td class="mainElement"><strong>addUserMessage()</strong></td>
+                <td><b>text</b>: The text within the user's message<br>
+                    <b>nextFunction</b>: The function that should follow after</td>
+                    <td>String, function</td>
+                <td> Adds user messages into the chat window.</td>
+            </tr>
+            <tr>
+                <td class="mainElement"><strong>setTheme()</strong></td>
+                <td><b>theme</b>: The theme name which should be set <br></td>
+                <td>String</td>
+                <td>Changes the theme of the chat window to best fit any site. Currently there are 3 themes available "defaultTheme", "coffeeTheme" and "businessTheme". Must be set before the chatWindow is initialized.</td>
+            </tr>
+            <tr>
+                <td class="mainElement"><strong>setMinimizeOnLoad()</strong></td>
+                <td><b>isMinimizedOnLoad</b>: Enables minimization on page load <br></td>
+                <td>Boolean</td>
+                <td> Sets the chat window to either be minimized when page is loaded or expanded. Must be set before the chatWindow has been initialized.</td>
+            </tr>
+            <tr>
+                <td class="mainElement"><strong>setCustomTheme()</strong></td>
+                <td>
+                    <b>windowStyles</b>: Holds changes to the window styles, if no changes, pass null <br>
+                    <b>messageStyles</b>:Holds changes to the message styles, if no changes, pass null  <br>
+                    <b>chatHeaderStyles</b>:Holds changes to the chatHeader styles, if no changes, pass null  <br>
+                    <b>questionStyles</b>:  Holds changes to the questions styles, if no changes, pass null<br>
+                </td>
+                <td>Theme Objects</td>
+                <td>Allows to create a custom theme for chat window. Must be set before the chatWindow has been initialized. More details on the format of each object and customization can be found at the bottom of this page.</td>
+            </tr>
+            <tr>
+                <td class="mainElement"><strong>setBotIcon()</strong></td>
+                <td>
+                    <b>botIcon</b>: String representing filepath to bot's profile piciture  <br>
+                </td>
+                <td>String</td>
+                <td>Sets the bot’s profile picture shown in the chat. Must be set before any message from the bot is sent.
+                </td>
+            </tr>
+            <tr>
+                <td class="mainElement"><strong>setUserIcon()</strong></td>
+                <td>
+                    <b>userIcon</b>: String representing filepath to user's profile piciture  <br>
+                </td>
+                <td>String</td>
+                <td>Sets the user’s profile picture shown in the chat. Must be set before any message from the user is sent.
+                </tr>
+            <tr>
+                <td class="mainElement"><strong>setBotMessageDelay()</strong></td>
+                <td>
+                    <b>botDelay</b>: Time in seconds to set delay time before bot messages <br>
+                </td>
+                <td>Number</td>
+                <td>Sets the delay time between messages sent by the bot. </td>
+            </tr>
+            <tr>
+                <td class="mainElement"><strong>addTextQuestion()</strong></td>
+                <td>
+                    <b>question</b>: Question presented as a bot message before text input is prompted  <br>
+                    <b>placeholder</b>: Placeholder text for input field <br>
+                    <b>nextFunction</b>: The function that should follow after <br>
+                </td>
+                <td>String, String, function</td>
+                <td>Makes text input field to visble and prompts the user to type their answer to a question. When submitted, user input will be add to the chat window in the form of a chat bubble.
+                </td>
+            </tr>
+            <tr>
+                <td class="mainElement"><strong>addDragDropQuestion()</strong></td>
+                <td>
+                    <b>question</b>: Question presented as a bot message before drag adn drop is prompted  <br>
+                    <b>choices</b>: Categories the inputs can be dragged into<br>
+                    <b>items</b>: Inputs the user can drag into categories<br>
+                    <b>nextFunction</b>: The function that should follow after <br>
+                </td>
+                <td>String, Array, Array, function</td>
+                <td> Prompts a drag and drop question by presenting a variety of categories which the user can drag input(s) into, in order to submit their answer.</td>
+            </tr>
+            <tr>
+                <td class="mainElement"><strong>addMultipleChoiceQuestion()</strong></td>
+                <td>
+                    <b>question</b>: Question presented as a bot message before drag and drop is prompted  <br>
+                    <b>choices</b>: The options the user can choose from<br>
+                    <b>correct</b>: The correct option(s) out of the options, if there is no correct option, pass empty array<br>
+                    <b>feedback</b>: Parallel array to choices, each element is feedback corresponding to each choice, if no feedback pass empty array<br>
+                    <b>nextFunction</b>: The function that should follow after <br>                </td>
+                <td>String, Array, Array, Array, function</td>
+                <td>Prompts a multiple choice question which can be submitted thorugh clicking. Also, if the feedback parameter is passed, it provides feedback according to the choice made, as well as indicates a if a right or wrong choice is made, in the case a correct answer is specified.</td>
+            </tr>
+            <tr>
+                <td class="mainElement"><strong>addSelectQuestion()</strong></td>
+                <td>
+                    <b>question</b>: Question presented as a bot message before text input is prompted  <br>
+                    <b>choices</b>: The options the user can choose from<br>
+                    <b>nextFunction</b>: The function that should follow after <br>                
+                </td>
+                <td>String, Array, function</td>
+                <td>Prompts a multi-select choice question which is submitted by clicking the button found under the presented options.</td>
+            </tr>
+       </tbody>
+     </table>
+    </section>
+    
+    <section class="" id="">
+        <h1> Setting Up a Custom Theme</h1>
+         <p>ChatLib allows for full customizability so you chatUI will always seamlessly integrate into the rest of your website. Below is the full configuration of the defaultTheme. When setting up your own custom theme, the custom theme has already been preset as the default theme, so when customizing you would be making edits to this set of styles, rather than starting from scratch.</p>
+       <p> In order to create your own custom theme, you must create each of the objects found within the Theme Object and edit the properties to you liking. The setCustomTheme() function allows you to make edits to just one, or all of the objects found within a Theme Object for convenience.</p>
+         <code>
+             <pre>
+    const defaultTheme = {
+        window: { 
+            margin: "10", 
+            backgroundColor: 'hsla(193, 14%, 89%, 0.99)', 
+            width: "500px", 
+            height: "500px",
+            position: "fixed",
+            bottom: "0",
+            right: "0",
+            transition: "0.5s",
+            convoAreaHeight: "400px",
+            convoAreaPadding: "5%"}, 
+    
+        messages: {
+            botProfileMarginRight: "10px",
+            userProfileMarginLeft: "10px",
+            profileBorderRadius: "50%",
+            profileWidth: "10%",
+    
+            botBubbleColour: "#0088ff",
+            botBubbleBorderRadius: "2rem",
+            botBubbleTextColour: "#fff",
+            botBubblePadding: "20px",
+            botBubbleWidth: "55%",
+    
+            userBubbleColour: "#5ccad7",
+            userBubbleBorderRadius: "2rem",
+            userBubbleTextColour: "#fff",
+            userBubblePadding: "20px",
+            userBubbleWidth: "55%",},
+        
+        chatHeader: {
+            colour: "black",
+            height: "30px",
+            padding: "10px",
+            minimizeButtonLocation: "flex-end",
+            border:"1px solid white",
+            borderRadius: "0.8rem 0.8rem 0 0",
+            minimizeButtonPadding: "5px",
+            minimizeButtonContent: "_",
+            maximizeButtonContent: "+"},
+        
+        questions: {
+            textInputBackgroundColour: "white",
+            textInputWidth: "80%",
+            textInputBorderRadius: "2rem",
+            textInputBorder: "1px solid #5ccae9",
+            textInputSendButtonText: "Send",
+    
+            buttonColor: "#77B9F1",
+            buttonBorder: "#77B9F1 1px solid",
+            buttonBorderRadius: "10px",
+            buttonFont: "'Varela Round', sans-serif",
+    
+    
+            OptionAreaMargins: "15%",
+            OptionAreaContainerColor: "white",
+            OptionAreaPadding: "10px",
+            OptionAreaBorderRadius: "10%",
+    
+            OptionColor: "#77B9F1",
+            OptionTextColor: "#fff",
+            OptionWidth: "75%",
+            OptionPadding: "20px",
+            OptionMargin:"10px",
+            OptionBorderRadius: "2rem",
+            
+            dragDropInputAreaBackgroundColor: "white",
+    
+            dragDropInputColor: "#77B9F1",
+            dragDropInputTextColor: "#fff",
+            dragDropInputWidth: "95%",
+            dragDropInputPadding: "5px",
+            dragDropInputMarginTop:"5px",
+            dragDropInputBorder: "1px solid #a5a5a5",
+            dragDropInputBorderRadius: "2rem",
+    
+    
+            correctColor: "hsla(110, 79%, 45%, 0.86)",
+            incorrectColor: "hsla(0, 79%, 45%, 0.86)",
+            selectColor: "hsla(208, 81%, 46%, 1)",
+    
+            selectSubmitText: "Done",}
+    };
+            </pre>
+         </code>
+    
+       </section>
+</div>
+
+</html>
+
+ 
+
